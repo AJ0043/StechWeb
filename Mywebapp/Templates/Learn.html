@@ -1,0 +1,696 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'css/Custom.css' %}" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>    
+    <link rel="icon" href="{% static 'Images/stec.png' %}" type="image/x-icon">
+    <title>{% block title %}STECH Web Development{% endblock title %}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="logo"><img src="{% static 'Images/Stec.png' %}" alt="Banner Image"></div>
+        <ul class="nav-links">
+            <li><a href="/home/">Home</a></li>
+            <li><a href="/Service/">Services</a></li>
+            <li><a href="/program/">Tutorial</a></li>
+            <li><a href="/About/">About</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/contact/">Contact</a></li>
+            <li><a href="/Login1/" class="login">LOGIN</a></li>
+        </ul>
+        <div class="burger" onclick="toggleMenu()">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+<script>
+function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+}
+</script>
+
+<style>
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(6, 175, 161);
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    font-family: 'Lora', serif;
+}
+.logo img {
+    width: 70px;
+    height: 60px;
+    border-radius: 10px;
+    margin-left: 150px;
+    margin-top:-10px;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 3.5rem;
+    transition: transform 0.5s ease-in-out;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: 'Satisfy', cursive;
+}
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+    font-size: 25px;
+}
+.nav-links a:hover {
+    color: yellow;
+}
+.login {
+    color: orange !important;
+    font-size: 1.4rem;
+}
+.nav-links.active {
+    transform: translateX(0);
+}
+.burger {
+    display: none;
+    cursor: pointer;
+}
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+@media screen and (max-width: 1024px) {
+    .nav-links {
+        position: absolute;
+        right: 0;
+        top: 80px;
+        gap:3rem;
+        background: rgba(5, 175, 161, 0.9);
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in-out;
+    }
+    .burger {
+        display: block;
+    }
+    .nav-links a {
+        font-size: 2rem;
+    }
+}
+</style>
+</body>
+</html>
+
+
+    <div class="Services">
+        <h1>E-learning Courses</h1>
+        <p>E-learning courses are a modern approach to education that utilizes digital platforms to deliver educational content. These courses allow learners to access study materials, video lectures, quizzes, and interactive modules anytime and anywhere, making learning flexible and accessible.    </p>
+    </div>
+    
+    <style>
+        /* General Styles for .Services */
+        .Services {
+        text-align: center;
+        margin: 0 auto;
+        padding: 50px 20px;
+        }
+    
+        .Services h1 {
+        font-size: 2.5rem; /* Responsive font size */
+        margin-top: 100px;
+        color: darkgoldenrod;
+        font-family: 'Satisfy', cursive;
+        
+        }
+    
+        .Services p {
+        font-size: 1.2rem; /* Slightly larger for readability */
+        margin-top: 20px;
+        line-height: 1.8;
+        color: #555;
+        max-width: 800px; /* Adjusted width to make it narrower */
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 20px; /* Add padding to ensure text doesn't touch the sides */
+        }
+    
+        /* Responsive Design Adjustments */
+        @media (max-width: 768px) {
+        .Services h1 {
+            font-size: 2rem; /* Smaller font size for medium screens */
+            margin-top: 40px;
+        }
+    
+        .Services p {
+            font-size: 1rem; /* Adjust paragraph font size */
+            padding: 0 15px; /* Add padding for medium screens */
+        }
+        }
+    
+        @media (max-width: 480px) {
+        .Services h1 {
+            font-size: 1.8rem; /* Further reduce size for small screens */
+            margin-top: 30px;
+        }
+    
+        .Services p {
+            font-size: 0.9rem; /* Adjust text for small screens */
+            padding: 0 10px; /* Adjust padding for smaller screens */
+        }
+        }
+    </style>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="wrapper">
+        <div class="card">
+            <img src="{% static 'Images/we3.png' %}">
+            <div class="info">
+                <h1>Web Development</h1>
+                <a href="http://127.0.0.1:2000/webd/">Click Here</a>
+            </div>
+        </div>    
+    
+        <div class="card shadow">
+            <img src="{% static 'Images/Des.jpg' %}">
+            <div class="info">
+                <h1>Desktop Application</h1>
+                <a href="http://127.0.0.1:2000/App/">Click Here</a>
+            </div>
+        </div>    
+       
+        <div class="card">
+            <img src="{% static 'Images/CEO.png' %}">
+            <div class="info">
+                <h1>Ecommerce</h1>
+                <a href="http://127.0.0.1:2000/Ecom/">Click Here</a>
+            </div>
+        </div>    
+        
+        <div class="card">
+            <img src="{% static 'Images/SEO0.png' %}">
+            <div class="info">
+                <h1>SEO</h1>
+                <a href="http://127.0.0.1:2000/SEO/">Click Here</a>
+            </div>
+        </div>    
+        <div class="card">
+            <img src="{% static 'Images/So.jpg' %}">
+            <div class="info">
+                <h1>Social Media</h1>
+                <a href="http://127.0.0.1:2000/Hosting/">Click Here</a>
+            </div>
+        </div>    
+    
+        <div class="card">
+            <img src="{% static 'Images/We0.webp' %}">
+            <div class="info">
+                <h1>Web maintenance</h1>
+                <a href="http://127.0.0.1:2000/Develop/">Click Here</a>
+            </div>
+        </div>    
+        
+        <div class="card">
+            <img src="{% static 'Images/ECO9.avif' %}">
+            <div class="info">
+                <h1>Hosting and Domain</h1>
+                <a href="http://127.0.0.1:2000/Domain/">Click Here</a>
+            </div>
+        </div>    
+    
+        <div class="card">
+            <img src="{% static 'Images/D.webp' %}">
+            <div class="info">
+                <h1>Digital Marketing</h1>
+                <a href="#">Click Here</a>
+            </div>
+        </div>    
+    
+        <div class="card">
+            <img src="{% static 'Images/AI.webp' %}">
+            <div class="info">
+                <h1>A.I Tools</h1>
+                <a href="#">Click Here</a>
+            </div>
+        </div>    
+    
+        <div class="card">
+            <img src="{% static 'Images/MIC.png' %}">
+            <div class="info">
+                <h1>Microsoft Excel</h1>
+                <a href="#">Click Here</a>
+            </div>
+        </div>    
+    
+        <div class="card">
+            <img src="{% static 'Images/VI8.svg' %}">
+            <div class="info">
+                <h1>Data Visualization</h1>
+                <a href="#">Click Here</a>
+            </div>
+        </div>    
+    
+        <div class="card">
+            <img src="{% static 'Images/ML.png' %}">
+            <div class="info">
+                <h1>Machine Learning</h1>
+                <a href="#">Click Here</a>
+            </div>
+        </div>    
+    </div>
+    
+    <style>
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 50px;
+        padding: 20px;
+        justify-content: center;
+        max-width: 1200px;
+        margin: auto;
+    }
+    
+    .card {
+        background: White;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        text-align: center;
+        font-family: 'Satisfy', cursive;
+
+    }
+    
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    
+    .card img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    
+    .card .info {
+        padding: 15px;
+    }
+    
+    .card h1 {
+        font-size: 1.2em;
+        color: black;
+        
+    }
+    
+    .card a {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 8px 15px;
+        background-color: rgb(5, 175, 161);
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background 0.3s ease;
+    }
+    
+    .card a:hover {
+        background: orange;
+    }
+    
+    @media (max-width: 768px) {
+        .wrapper {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .wrapper {
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        }
+    }
+    </style>
+    
+
+
+<style>
+    .banner {
+        position: relative;
+        width: 300px; /* Adjust the width as needed */
+        overflow: hidden;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin: 20px auto;
+        background: black;
+        text-align: center;
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    .banner img {
+        width: 100%;
+        height: auto;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    
+    .banner .on {
+        position: absolute;
+        top: 0;
+        background-color: #ff5722; /* Default background color */
+        color: #fff;
+        padding: 5px 15px;
+        font-size: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
+        border-radius: 0 0 10px 10px; /* Rounded corners at the bottom */
+        z-index: 1;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Position the tag on the left */
+    .banner .on.left {
+        left: 0;
+        transform: translate(-5px, -5px);
+    }
+    
+    /* Position the tag on the right */
+    .banner .on.right {
+        right: 0;
+        transform: translate(5px, -5px);
+    }
+    
+    .banner .ben {
+        padding: 15px;
+        text-align: left;
+    }
+    
+    .banner .ben h1 {
+        margin: 10px 0;
+        font-size: 20px;
+        color: Orange;
+        text-align:center;
+    }
+    
+    .banner .ben p {
+        font-size: 15   px;
+        color: White;
+        line-height: 1.5;
+        text-align:center;
+    }
+    
+    .banner .ben {
+        padding: 15px;
+        text-align: center; /* Centers the content including the button */
+    }
+    
+    .banner .ben a {
+        display: inline-block;
+        margin-top: 10px;
+        text-decoration: none;
+        color: #fff;
+        background-color: green;
+        padding: 8px 12px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease-in-out;
+    }
+    .banner .ben a:hover{
+        background:Orange;
+
+
+    }
+    
+    
+    .banner:hover {
+        transform: scale(1.05); /* Slight enlarge on hover */
+
+    }
+    
+</style>
+
+<style>
+    .contact-button img {
+        border-radius:200px
+        cursur:pointer;
+
+    }
+
+</style>    
+<style>
+
+    .Contact {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f4f4f4;
+    }
+    
+    .contact-button {
+        display: inline-block;
+        text-decoration: none;
+        border-radius: 2px;
+        background-color:rgb(30, 228, 155); /* Button background color */
+        padding: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .contact-button img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px; /* Rounded corners for the image */
+        display: block; /* Remove space below the image */
+    }
+    
+    .contact-button:hover {
+        transform: scale(1.05); /* Slightly enlarge the button */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Shadow effect */
+        background-color: #ff7043; /* Lighter color on hover */
+    }
+    
+
+
+
+</style>    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="Footer-Svg">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="rgb(5, 175, 161)" fill-opacity="1" d="M0,160L48,144C96,128,192,96,288,96C384,96,480,128,576,170.7C672,213,768,267,864,256C960,245,1056,171,1152,154.7C1248,139,1344,181,1392,202.7L1440,224L1440,320L0,320Z"></path>
+    </svg>
+</div>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-col about">
+            <h4>About Us</h4>
+            <p>I specialize in Python full stack development, crafting high-quality web applications tailored to client needs.</p>
+            <a href="http://127.0.0.1:2000/home/">
+                <img class="footer-logo" src="{% static 'Images/stec.png' %}" alt="STECH Logo">
+            </a>
+        </div>
+
+        <div class="footer-col services">
+            <h4>Services</h4>
+            <ul>
+                <li><a href="#">Web Development</a></li>
+                <li><a href="#">Application</a></li>
+                <li><a href="#">Ecommerce</a></li>
+                <li><a href="#">Hosting & Domain</a></li>
+                <li><a href="#">Digital Marketing</a></li>
+                <li><a href="#">Web Maintenance</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col company">
+            <h4>Company</h4>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Legal</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Tutorial</a></li>
+                <li><a href="#">Programming</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col follow">
+            <h4>Follow Us</h4>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/anvesh-jain-22875b264/" target="_blank" class="fab fa-linkedin"></a>
+                <a href="https://www.facebook.com/yourprofile" class="fab fa-facebook" target="_blank"></a>
+                <a href="https://twitter.com/yourprofile" class="fab fa-twitter" target="_blank"></a>
+                <a href="https://www.instagram.com/stechweb56/" class="fab fa-instagram" target="_blank"></a>
+           
+            </div>
+        </div>
+        
+
+    <div class="footer-bottom">
+        <p>&copy; 2024 StechWeb. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<style>
+    footer {
+        background-color: rgb(5, 175, 161);
+        color: white;
+        padding: 40px 5%;
+        text-align: center;
+        font-family: 'Satisfy', cursive;    
+    }
+
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .footer-col {
+        flex: 1;
+        min-width: 200px;
+    }
+
+    .footer-col h4 {
+        margin-bottom: 15px;
+        font-size: 22px;
+        color: orange;
+        position: relative;
+    }
+
+    .footer-col h4::after {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 3px;
+        background: white;
+        margin: 5px auto;
+    }
+
+    .footer-col ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-col ul li {
+        margin: 8px 0;
+    }
+
+    .footer-col ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        transition: color 0.3s;
+    }
+
+    .footer-col ul li a:hover {
+        color: orange;
+    }
+
+    .social-links a {
+        display: inline-block;
+        font-size: 22px;
+        color: white;
+        background: rgba(255, 255, 255, 0.2);
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 50%;
+        margin: 5px;
+        transition: background 0.3s;
+    }
+
+    .social-links a:hover {
+        background: orange;
+    }
+
+    .footer-bottom {
+        margin-top: 20px;
+        font-size: 16px;
+    }
+
+    .footer-logo {
+        width: 100px;
+        height: auto;
+        margin-top: 15px;
+        display: block;
+        border-radius: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @media (max-width: 768px) {
+        .footer-container {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-logo {
+            width: 100px;
+        }
+    }
+</style>

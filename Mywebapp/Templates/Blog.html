@@ -1,0 +1,946 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'css/Custom.css' %}" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>    
+    <link rel="icon" href="{% static 'Images/stec.png' %}" type="image/x-icon">
+    <title>{% block title %}STECH Web Development{% endblock title %}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="logo"><img src="{% static 'Images/Stec.png' %}" alt="Banner Image"></div>
+        <ul class="nav-links">
+            <li><a href="/home/">Home</a></li>
+            <li><a href="/Service/">Services</a></li>
+            <li><a href="/program/">Tutorial</a></li>
+            <li><a href="/About/">About</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/contact/">Contact</a></li>
+            <li><a href="/Login1/" class="login">LOGIN</a></li>
+        </ul>
+        <div class="burger" onclick="toggleMenu()">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+<script>
+function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+}
+</script>
+
+<style>
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(6, 175, 161);
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    font-family: 'Lora', serif;
+}
+.logo img {
+    width: 70px;
+    height: 60px;
+    border-radius: 10px;
+    margin-left: 150px;
+    margin-top:-10px;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 3.5rem;
+    transition: transform 0.5s ease-in-out;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: 'Satisfy', cursive;
+}
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+    font-size: 25px;
+}
+.nav-links a:hover {
+    color: yellow;
+}
+.login {
+    color: orange !important;
+    font-size: 1.4rem;
+}
+.nav-links.active {
+    transform: translateX(0);
+}
+.burger {
+    display: none;
+    cursor: pointer;
+}
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+@media screen and (max-width: 1024px) {
+    .nav-links {
+        position: absolute;
+        right: 0;
+        top: 80px;
+        gap:3rem;
+        background: rgba(5, 175, 161, 0.9);
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in-out;
+    }
+    .burger {
+        display: block;
+    }
+    .nav-links a {
+        font-size: 2rem;
+    }
+}
+</style>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+    <div class="Banner2 shadow">
+        <img src="{% static 'Images/html copy.png' %}">    
+        <h2>Our<span style="color: Orange;">Blogs</span></h2>
+       <p>we share valuable insights, tips, and trends in web development,<br> SEO, desktop application development, e-commerce<br> social media marketing, and digital marketing. </p>
+    </div>
+    
+    <style>
+        .Banner2 {
+        width: 100%;
+        height: 700px;
+        background-color:rgb(5,175,161);
+    }
+    
+    .Banner2 img {
+        width: 600px;
+        height: 550px;
+        margin-top: 150px;
+        margin-left: 200px;
+        user-select: none;
+    }
+    
+    .Banner2 h2 {
+        margin-top: -400px;
+        margin-left: 850px;
+        font-size: 100px;
+        color: #fff;
+        font-family: 'Satisfy', cursive;
+
+        
+    }
+    
+    .Banner2 h2::before {
+        content: '';
+        left: 0;
+        bottom: -1px;
+        background-color: #52c027;
+        height: 10px;
+        width: 500px;
+    }
+    
+    .Banner2 p {
+        margin-top: 10px;
+        font-size: 20px;
+        color: #fff;
+        text-align: center;
+        margin-left: 550px;
+        font-family:serif;
+        
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 1400px) {
+        .Banner2 {
+            height: auto;
+            padding: 20px;
+            text-align: center;
+        }
+    
+        .Banner2 img {
+            width: 250px;
+            height: 350px;
+            margin: 0 auto;
+            margin-top: 100px;
+        }
+    
+        .Banner2 h2 {
+            margin-top: 20px;
+            margin-left: 0;
+            font-size: 50px;
+        }
+    
+        .Banner2 h2::before {
+            width: 100%;
+            position: relative;
+            margin: 0 auto;
+        }
+    
+        .Banner2 p {
+            margin: 20px auto;
+            font-size: 16px;
+            position: relative;
+        }
+    }
+    
+    @media (max-width: 1200px) {
+        .Banner2 {
+            height: auto;
+            padding: 20px;
+            text-align: center;
+        }
+    
+        .Banner2 img {
+            width: 250px;
+            height: 350px;
+            margin: 0 auto;
+            margin-top: 100px;
+        }
+    
+        .Banner2 h2 {
+            margin-top: 20px;
+            margin-left: 0;
+            font-size: 50px;
+            position: relative;
+        }
+    
+        .Banner2 h2::before {
+            width: 100%;
+            position: relative;
+            margin: 0 auto;
+        }
+    
+        .Banner2 p {
+            margin: 20px auto;
+            font-size: 16px;
+            position: relative;
+        }
+    }
+    
+    @media (max-width: 992px) {
+        .Banner2 {
+            height: auto;
+            padding: 20px;
+            text-align: center;
+        }
+    
+        .Banner2 img {
+            width: 250px;
+            height: 350px;
+            margin: 0 auto;
+            margin-top: 100px;
+        }
+    
+        .Banner2 h2 {
+            margin-top: 20px;
+            margin-left: 0;
+            font-size: 50px;
+            position: relative;
+        }
+    
+        .Banner2 h2::before {
+            width: 100%;
+            position: relative;
+            margin: 0 auto;
+        }
+    
+        .Banner2 p {
+            margin: 20px auto;
+            font-size: 16px;
+            position: relative;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .Banner2 {
+            height: auto;
+            padding: 20px;
+            text-align: center;
+        }
+    
+        .Banner2 img {
+            width: 250px;
+            height: 350px;
+            margin: 0 auto;
+            margin-top: 100px;
+        }
+    
+        .Banner2 h2 {
+            margin-top: 20px;
+            margin-left: 0;
+            font-size: 50px;
+            position: relative;
+        }
+    
+        .Banner2 h2::before {
+            width: 100%;
+            position: relative;
+            margin: 0 auto;
+        }
+    
+        .Banner2 p {
+            margin: 20px auto;
+            font-size: 16px;
+            position: relative;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .Banner2 img {
+            width: 200px;
+            height: 300px;
+            margin-top: 100px;
+        }
+    
+        .Banner2 h2 {
+            font-size: 40px;
+        }
+    
+        .Banner2 p {
+            font-size: 14px;
+        }
+    }
+    
+    
+</style>
+
+
+<div class="wrapper">
+        <div class="banner">
+            <img src="{% static 'Images/Ima.jpg' %}">
+            <div class="ben">
+               <h1>10 Essential Skills Every Aspiring Web Developer Should Learn</h1>
+                <p>Contemplating a career in web development? Learn about the technical and non-technical skills necessary for the job and ponder if you are inclined to acquire and hone these skills for a successful web development career.
+
+                </p>
+                <a href="#">Click Here</a>
+            </div>
+        </div>
+        
+        <div class="banner">
+            <img src="{% static 'Images/Ass.jpeg' %}">
+            <div class="ben">
+                <h1>The Role of WebAssembly in Web Development</h1>
+                <p>WebAssembly (Wasm) is a binary instruction format for compiling and executing code in a client-side web browser. </p>
+                <a href="#">Click Here</a>
+            </div>
+        </div>
+        
+      
+        <div class="banner">
+            <img src="{% static 'Images/Fram.jpg' %}">
+            <div class="ben">
+                <h1> Top 5 CSS Frameworks for Faster Web Design in 2025 </h1>
+                <p>There are many web application development companies that provide a multitude of web development solutions, each using a different framework for the project. </p>
+                <a href="#">Click Here</a>
+            </div>
+        </div>
+
+        <div class="banner">
+            <img src="{% static 'Images/AI99.png' %}">
+            <div class="ben">
+                <h1>How AI is Revolutionizing Web Development</h1>
+                <p>Meet AI for Web Development! Well, I can tell that artificial intelligence known as AI has generated a tremendous impact in various sectors globally. And guess what? Web development is no different. </p>
+                <a href="#">Click Here</a>
+            </div>
+        </div>
+
+        <div class="banner">
+            <img src="{% static 'Images/Well.jpg' %}">
+            <div class="ben">
+                <h1>How to Build a Portfolio That Gets You Hired as a Web Developer</h1>
+                <p>Think of your web developer portfolio as a lasting resource that a potential employer can refer to when they need someone right away. They can also share it with other decision-makers .</p>
+                <a href="#">Click Here</a>
+            </div>
+        </div>
+
+
+
+        <div class="banner">
+            <img src="{% static 'Images/Robot.webp' %}">
+            <div class="ben">
+                <h1>How AI and Machine Learning Are Revolutionizing Robotics</h1>
+               <p>Artificial Intelligence (AI) in robotics relies on Machine Learning (ML), which allows robots to improve over time by learning from experience without being explicitly programmed.   </p>
+                <a href="#">Click Here</a>
+            </div>
+        </div>
+
+        <div class="banner">
+            <img src="{% static 'Images/Data.png' %}">
+            <div class="ben">
+                <h1>Top 10 Tools Every Aspiring Data Scientist Should Learn</h1>
+                <p>Data scientists use data to determine which questions teams should be asking and help teams answer those questions by creating algorithms and data models to forecast outcomes.  </p>
+                <a href="#">Click Here</a>
+            </div>
+        </div>
+        <div class="banner">
+            <img src="{% static 'Images/AI4.jpg' %}">
+            <div class="ben">
+                <h1>The Difference Between Machine Learning, Deep Learning, and AI</h1>
+                <p>Machine learning is a subset of artificial intelligence. In turn, deep learning is a subset of machine learning. Essentially, all deep learning is machine learning, and all machine learning is artificial intelligence</p>
+                <a href="#">Click Here</a>
+            </div>
+        </div>
+   
+   
+   
+   
+    </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        ScrollReveal().reveal('.card img', {
+            duration: 2000,
+            origin: 'left',
+            distance: '150px',
+            delay: 200
+        });
+
+        ScrollReveal().reveal('.wrapper', {
+            duration: 1000,
+            origin: 'top',
+            distance: '50px',
+            delay: 300
+        });
+
+        ScrollReveal().reveal('.contents p', {
+            duration: 1000,
+            origin: 'bottom',
+            distance: '50px',
+            delay: 400
+        });
+
+        ScrollReveal().reveal('.contents a', {
+            duration: 1000,
+            origin: 'right',
+            distance: '50px',
+            delay: 500
+        });
+
+        // New section reveal
+        ScrollReveal().reveal('.heading', {
+            duration: 1000,
+            origin: 'top',
+            distance: '50px',
+            delay: 100
+        }); 
+
+        ScrollReveal().reveal('.box', {
+            duration: 1000,
+            origin: 'bottom',
+            distance: '50px',
+            delay: 200,
+            interval: 200
+        });
+    });
+</script>
+
+<style>
+
+/* Wrapper for Cards */
+/* Wrapper for Cards */
+/* Wrapper for Cards */
+
+.wrapper {
+display: grid;
+grid-template-columns: repeat(4, 1fr); /* Ensure 4 cards per row */
+gap: 70px; /* Space between cards */
+padding: 20px;
+justify-content: center;
+max-width: 1800px; /* Increased overall width */
+margin: 50px auto; /* Center alignment */
+
+}
+/* Card Styles */
+.card {
+width: 300px; /* Set a wider fixed width for cards */
+background: Cyan;
+border: 1px solid #ddd;
+border-radius: 8px;
+overflow: hidden;
+box-shadow: 0 4px 8px rgba(94, 199, 14, 0.1);
+transition: transform 0.3s ease;
+text-align: center;
+margin: auto;
+box-shadow: rgba(100, 40, 40, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+}
+
+.card:hover {
+transform: translateY(-20px); /* Lift on hover */
+box-shadow: 0 8px 16px rgba(139, 16, 16, 0.2); /* Enhanced hover shadow */
+transition: 0.5s ease;
+}
+
+.card img {
+width: 100%;
+height: auto;
+object-fit: cover;
+}
+
+.card .info {
+padding: 15px;
+}
+
+.card h1 {
+font-size: 1.5em;
+margin: 10px 0;
+color: orange;
+}
+
+.card p {
+font-size: 1rem;
+color: white;
+line-height: 1.5;
+}
+
+.card a {
+display: inline-block;
+margin-top: 10px;
+padding: 10px 20px;
+background: green;
+color: white;
+text-decoration: none;
+border-radius: 5px;
+transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.card a:hover {
+background: orange;
+transform: scale(1.05); /* Slight enlarge on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+.wrapper {
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row for tablets */
+}
+}
+
+@media (max-width: 768px) {
+.wrapper {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row for smaller devices */
+}
+}
+
+@media (max-width: 480px) {
+.wrapper {
+    grid-template-columns: repeat(1, 1fr); /* 1 card per row for mobile devices */
+}
+.card h1 {
+    font-size: 1.2em;
+}
+.card p {
+    font-size: 0.9em;
+}
+.card a {
+    font-size: 0.85em;
+    padding: 8px 15px;
+}
+}
+
+</style>    
+
+
+
+<style>
+.banner {
+    position: relative;
+    width: 300px; /* Adjust the width as needed */
+    overflow: hidden;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    background: rgb(5,175,161);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.banner .on {
+    position: absolute;
+    top: 0;
+    background-color: #ff5722; /* Default background color */
+    color: #fff;
+    padding: 5px 15px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 0 0 10px 10px; /* Rounded corners at the bottom */
+    z-index: 1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Position the tag on the left */
+.banner .on.left {
+    left: 0;
+    transform: translate(-5px, -5px);
+}
+
+/* Position the tag on the right */
+.banner .on.right {
+    right: 0;
+    transform: translate(5px, -5px);
+}
+
+.banner .ben {
+    padding: 15px;
+    text-align: left;
+}
+
+.banner .ben h1 {
+    margin: 10px 0;
+    font-size: 20px;
+    color: Orange;
+    text-align:center;
+}
+
+.banner .ben p {
+    font-size: 15   px;
+    color: White;
+    line-height: 1.5;
+    text-align:center;
+}
+
+.banner .ben {
+    padding: 15px;
+    text-align: center; /* Centers the content including the button */
+}
+
+.banner .ben a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #fff;
+    background-color: Orange;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+.banner .ben a:hover{
+    background:green;
+
+
+}
+
+
+.banner:hover {
+    transform: scale(1.05); /* Slight enlarge on hover */
+
+}
+
+</style>
+
+<style>
+.contact-button img {
+    border-radius:200px
+    cursur:pointer;
+
+}
+
+</style>    
+<style>
+
+.Contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.contact-button {
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 2px;
+    background-color:rgb(30, 228, 155); /* Button background color */
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-button img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Rounded corners for the image */
+    display: block; /* Remove space below the image */
+}
+
+.contact-button:hover {
+    transform: scale(1.05); /* Slightly enlarge the button */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    background-color: #ff7043; /* Lighter color on hover */
+}
+
+
+
+
+</style>    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="Footer-Svg">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="rgb(5, 175, 161)" fill-opacity="1" d="M0,160L48,144C96,128,192,96,288,96C384,96,480,128,576,170.7C672,213,768,267,864,256C960,245,1056,171,1152,154.7C1248,139,1344,181,1392,202.7L1440,224L1440,320L0,320Z"></path>
+    </svg>
+</div>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-col about">
+            <h4>About Us</h4>
+            <p>I specialize in Python full stack development, crafting high-quality web applications tailored to client needs.</p>
+            <a href="http://127.0.0.1:2000/home/">
+                <img class="footer-logo" src="{% static 'Images/stec.png' %}" alt="STECH Logo">
+            </a>
+        </div>
+
+        <div class="footer-col services">
+            <h4>Services</h4>
+            <ul>
+                <li><a href="#">Web Development</a></li>
+                <li><a href="#">Application</a></li>
+                <li><a href="#">Ecommerce</a></li>
+                <li><a href="#">Hosting & Domain</a></li>
+                <li><a href="#">Digital Marketing</a></li>
+                <li><a href="#">Web Maintenance</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col company">
+            <h4>Company</h4>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Legal</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Tutorial</a></li>
+                <li><a href="#">Programming</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col follow">
+            <h4>Follow Us</h4>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/anvesh-jain-22875b264/" target="_blank" class="fab fa-linkedin"></a>
+                <a href="https://www.facebook.com/yourprofile" class="fab fa-facebook" target="_blank"></a>
+                <a href="https://twitter.com/yourprofile" class="fab fa-twitter" target="_blank"></a>
+                <a href="https://www.instagram.com/stechweb56/" class="fab fa-instagram" target="_blank"></a>
+           
+            </div>
+        </div>
+        
+
+    <div class="footer-bottom">
+        <p>&copy; 2024 StechWeb. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<style>
+    footer {
+        background-color: rgb(5, 175, 161);
+        color: white;
+        padding: 40px 5%;
+        text-align: center;
+        font-family: 'Satisfy', cursive;
+
+    }
+
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .footer-col {
+        flex: 1;
+        min-width: 200px;
+    }
+
+    .footer-col h4 {
+        margin-bottom: 15px;
+        font-size: 22px;
+        color: orange;
+        position: relative;
+    }
+
+    .footer-col h4::after {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 3px;
+        background: white;
+        margin: 5px auto;
+    }
+
+    .footer-col ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-col ul li {
+        margin: 8px 0;
+    }
+
+    .footer-col ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        transition: color 0.3s;
+        
+    }
+
+    .footer-col ul li a:hover {
+        color: orange;
+    }
+
+    .social-links a {
+        display: inline-block;
+        font-size: 22px;
+        color: white;
+        background: rgba(255, 255, 255, 0.2);
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 50%;
+        margin: 5px;
+        transition: background 0.3s;
+    }
+
+    .social-links a:hover {
+        background: orange;
+    }
+
+    .footer-bottom {
+        margin-top: 20px;
+        font-size: 16px;
+    }
+
+    .footer-logo {
+        width: 100px;
+        height: auto;
+        margin-top: 15px;
+        display: block;
+        border-radius: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @media (max-width: 768px) {
+        .footer-container {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-logo {
+            width: 100px;
+        }
+    }
+</style>
